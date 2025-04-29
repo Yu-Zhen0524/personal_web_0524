@@ -1,0 +1,395 @@
+/*header,
+section,
+footer {
+    background-color: rgb(234, 215, 190);
+}*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./img/backgroung.jpg);
+    background-attachment: fixed;
+}
+
+/*section 0 header*/
+
+nav {
+    background-color: #000000ad;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    font-family: "Noto Sans TC";
+    font-size: 18px;
+}
+
+nav p {
+    font-family: "Noto Sans TC", sans-serif;
+    color: rgb(216, 209, 202);
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav .list {
+    margin-left: auto;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav .list a {
+    padding: 10Px 20px;
+    margin: 0px 15px;
+
+    color: rgb(216, 209, 202);
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: rgb(255, 228, 196);
+    text-decoration: underline;
+    text-decoration-color: bisque;
+}
+
+.begin {
+    height: 95vh;
+    background-image: url("./img/landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.my_photo {
+    width: 250px;
+    height: 250px;
+    /* 把寬跟高設成一樣，才會變成正圓 */
+    border-radius: 50%;
+    /* 圓形！ */
+    margin-bottom: 20px;
+    /* 保持照片比例*/
+    object-fit: cover;
+    margin: 0 200px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.begin h1 {
+    margin: 0px 200px;
+
+    color: white;
+    font-family: "Noto Sans TC";
+    font-size: 36px;
+    line-height: 1.5em;
+}
+
+.begin h2 {
+    font-family: "Noto Sans TC", sans-serif;
+    color: rgb(255, 228, 196);
+    font-size: 18px;
+    margin: 5px 200px;
+    font-weight: bold;
+}
+
+/*section 1 About me*/
+
+.key {
+    color: red;
+}
+
+.about_me {
+    background-color: rgba(248, 211, 166, 0.486);
+    margin: 100px;
+    border-radius: 20px;
+    height: 60vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.about_me h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
+    justify-content: center;
+    font-family: "Noto Sans TC";
+    color: rgb(83, 58, 28);
+    font-size: 40px;
+}
+
+.about_me p {
+    text-align: center;
+
+    color: rgb(83, 58, 28);
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 50px 200px;
+    line-height: 2.5em;
+
+}
+
+
+/*section 2 專業技能*/
+.skill {
+    /*background-color: rgba(153, 180, 215, 0.313);*/
+    height: 120vh;
+}
+
+.skill_container {
+    /*background-color: rgba(127, 255, 212, 0.368);*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin: 0 100px 0 50px;
+    padding: 0 0 50px 0;
+
+}
+
+.skill h2 {
+    text-align: center;
+    margin: 0px 50px 0px 50px;
+    text-decoration: underline;
+
+    font-family: "Noto Sans TC", sans-serif;
+    color: rgb(83, 58, 28);
+    font-size: 40px;
+}
+
+.coding.skill {
+    background-color: #B7B7B7;
+    height: 40vh;
+    width: 100vh;
+    padding: 20px;
+    margin: 50px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.coding.skill p {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+
+    color: rgb(83, 58, 28);
+    font-size: 24px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: bold;
+}
+
+.coding_name {
+    margin: auto;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #53381C;
+    margin: 0px 15px;
+}
+
+.coding_bar {
+    width: 100%;
+    background-color: #A3644C;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 20px;
+    animation: grow 1.5s ease-out forwards;
+}
+
+.fill.cplus {
+    background-color: #f16529;
+    width: 70%;
+}
+
+.fill.Py {
+    background-color: #f16529;
+    width: 50%;
+}
+
+.fill.HTML {
+    background-color: #f16529;
+    width: 60%;
+}
+
+.fill.CSS {
+    background-color: #f16529;
+    width: 60%;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100;
+    }
+}
+
+.explan {
+    /*background-color: #B7B7B7;*/
+    width: 45%;
+    /*padding: 20px;*/
+    margin: 50px 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.7em;
+    text-align: justify;
+    font-weight: bold;
+    color: rgb(83, 58, 28);
+
+}
+
+.QGIS_container {
+    /*background-color: rgba(127, 255, 212, 0.368);*/
+    display: flex;
+    height: 40vh;
+    align-items: center;
+
+
+    gap: 0px;
+    border-radius: 20px;
+    padding: 100px 0;
+    /*margin: 0 50px 0 50px;*/
+}
+
+.bottom {
+    background-color: #B7B7B7;
+    border-radius: 10px;
+    height: 50px;
+    width: 30%;
+    align-content: center;
+    justify-self: center;
+    margin-bottom: 20PX;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.QGIS_container h4 {
+    align-self: center;
+    text-align: center;
+    font-family: "Noto Sans TC", sans-serif;
+    color: rgb(83, 58, 28);
+    font-size: 30px;
+}
+
+.QGIS_info {
+    width: 45%;
+    margin: 0px 100px;
+    font-size: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.7em;
+    text-align: justify;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(83, 58, 28);
+}
+
+
+.QGIS_container a {
+    color: rgb(83, 58, 28);
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: bold;
+
+}
+
+.QGIS_container a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 0, 0);
+}
+
+.video video {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*section 3 課外活動*/
+.activities {
+    display: flex;
+
+    background-color: rgba(248, 211, 166, 0.486);
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-family: "Noto Sans TC";
+    color: rgb(83, 58, 28);
+    font-size: 40px;
+    padding-top: 20px;
+
+}
+
+
+.info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5em;
+    margin: 5px;
+}
+
+.act_photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 180px 80px;
+    background-color: rgba(248, 211, 166, 0.486);
+}
+
+.act_photo div {
+    width: 300px;
+    text-align: center;
+}
+
+.act_photo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.act_photo h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.act_photo p {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+
+footer {
+    background-color: rgb(40, 68, 79);
+    height: 40px;
+    color: #fffdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
